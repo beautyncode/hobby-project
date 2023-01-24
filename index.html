@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmetology My Hobby 💇🏾‍♀️</title>
+    <style>
+      body {
+        color: rgb(37, 26, 12);
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(253, 239, 132) 0%,
+          rgb(247, 198, 169) 54.2%,
+          rgb(21, 186, 196) 100.3%
+        );
+      }
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      h2 {
+        text-align: center;
+        font-weight: lighter;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        text-align: center;
+        line-height: 1.4;
+      }
+      a {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        transition: all 200ms ease-in-out;
+      }
+      a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px;
+        border: 1px solid #fff;
+        font-size: 15px;
+        padding: 9px;
+        transition: all 200ms ease-in-out;
+        color: white;
+        background-color: black;
+      }
+      button:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+      }
+      footer {
+        color: rgb(45, 40, 34);
+        text-align: center;
+        font-family: monospace;
+        font-size: 14px;
+        padding-top: 0;
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+      }
+      .main {
+        margin: 20px 50px 20px 50px;
+        max-width: 100%;
+        padding: 30px;
+        background-color: white;
+        border-radius: 5px;
+      }
+      #main-image {
+        transition: all 200ms ease-in-out;
+      }
+      #main-image:hover {
+        cursor: pointer;
+        filter: contrast(90%);
+        transform: scale(1.09);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+      }
+      .dark {
+        background: radial-gradient(
+          circle at -8.9% 51.2%,
+          rgb(255, 124, 0) 0%,
+          rgb(255, 124, 0) 15.9%,
+          rgb(255, 163, 77) 15.9%,
+          rgb(255, 163, 77) 24.4%,
+          rgb(19, 30, 37) 24.5%,
+          rgb(19, 30, 37) 66%
+        );
+        color: wheat;
+      }
+      .dark .main {
+        background-color: rgb(43, 40, 40);
+      }
+      .dark a {
+        color: salmon;
+      }
+      .dark footer {
+        color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="darkbutton">Change Theme</button>
+    <div class="main">
+      <h1>Cosmetology</h1>
+      <h2>Previous career now Creative Hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Cosmetology" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/644/original/Untitled_design-12.png?1669681830"
+          alt=""
+          id="main-image"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://freight.cargo.site/w/1440/q/94/i/476eb2221777e072214514e05d9c51141b584477780a65412d16ded6bcd7435d/1.jpg"
+          alt=""
+          class="image-gallery"
+        />
+        <img
+          src="https://freight.cargo.site/w/1200/q/94/i/d001f5d58da4912c82552b906be16fa3ad3eabc38574205e41d490b0378d3f0b/2.gif"
+          alt=""
+          class="image-gallery"
+        />
+        <img
+          src="https://freight.cargo.site/w/1200/q/94/i/74c6514585eaa7a0ef442bfa8c90832a961cd89f21010abad2babe570432337f/final-test.gif"
+          alt=""
+          class="image-gallery"
+        />
+        <img
+          src="https://freight.cargo.site/w/1440/q/94/i/e16e2075cd6780b0f343363ec9b7d2af67c422f008ae5e7738aeff28ff10b083/2.jpg"
+          alt=""
+          class="image-gallery"
+        />
+      </div>
+      <p>
+        Cosmetology is the study and application of beauty treatment. Branches
+        of specialty include hairstyling, skin care, cosmetics,
+        manicures/pedicures, non-permanent hair removal such as waxing and
+        sugaring, and permanent hair removal processes such as electrology and
+        intense pulsed light.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Cosmetology" target="_blank"
+        >Read on Wikipedia</a
+      >
+      <p>
+        I decided to leave Cosmetology to become a Full Time Front End
+        Developer. This was an easy decision because I knew I would have the
+        freedom and passion with Developing more than I had with Cosmetology.
+        Now I enjoy being a hairstlyst in my free time which in turn makes it
+        fun again! I am currently accepting new clients so please feel free to
+        click the book button below for a new client intake form.
+      </p>
+      <button class="book">Book Me</button>
+    </div>
+    <footer>👩🏾‍💻 coded by: Kenyata Walls with HTML, CSS and Javascript</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+        //        if (body.classList.contains("dark")) {
+        // body.classList.remove("dark");
+        //} else {
+        //  body.classList.add("dark");
+        // }
+      }
+      let themeButton = document.querySelector(".darkbutton");
+      themeButton.addEventListener("click", changeTheme);
+      //
+      function bookMe() {
+        let fullName = prompt("What is your Full Name?");
+        let email = prompt("What is your email?");
+        alert(
+          "Thank you, " +
+            fullName +
+            "! You will recieve a booking form to your email shortly."
+        );
+      }
+      let bookButton = document.querySelector(".book");
+      bookButton.addEventListener("click", bookMe);
+    </script>
+  </body>
+</html>
